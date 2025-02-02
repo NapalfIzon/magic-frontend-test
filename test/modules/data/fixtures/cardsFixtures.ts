@@ -1,0 +1,40 @@
+import { Card } from "@src/modules/data/types/Card";
+
+export const cardsFixtures: Card[] = [
+  {
+    name: "Card A",
+    manaCost: "1",
+    colors: ["Red"],
+    type: "Creature",
+    setName: "Set1",
+    text: "Texto A",
+    power: "2",
+    toughness: "2",
+    imageUrl: "http://example.com/a",
+    id: "id1",
+  },
+  {
+    name: "Card A",
+    manaCost: "1",
+    colors: ["Red"],
+    type: "Creature",
+    setName: "Set1",
+    text: "Texto A",
+    power: "2",
+    toughness: "2",
+    imageUrl: "http://example.com/a2",
+    id: "id2",
+  },
+  {
+    name: "Card B",
+    manaCost: "2",
+    colors: ["Blue"],
+    type: "Spell",
+    setName: "Set2",
+    text: "Texto B",
+    power: "3",
+    toughness: "5",
+    imageUrl: "http://example.com/b",
+    id: "id3",
+  },
+];
