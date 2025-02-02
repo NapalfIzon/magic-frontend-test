@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
 import useRequest, { METHOD_TYPE } from "@src/modules/shared/hooks/useRequest";
 import { Card } from "../types/Card";
 
@@ -40,8 +40,9 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     if (response) {
       populateCardsData();
-      setIsLoading(false);
     }
+
+    setIsLoading(false);
   }, [response, formattedCards]);
 
   const value = useMemo(
