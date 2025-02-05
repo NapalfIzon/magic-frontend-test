@@ -1,7 +1,10 @@
 import { Card } from "../types/Card";
-import { randomCards } from "./randomCards";
 
 export const formatCards = (cards: Card[]) => {
+  if (cards.length === 0) {
+    return [];
+  }
+
   const formattedCards = cards
     .map((card) => ({
       name: card.name,
@@ -17,7 +20,5 @@ export const formatCards = (cards: Card[]) => {
     }))
     .filter((item, index, self) => index === self.findIndex((i) => i.name === item.name));
 
-  const randomOrderCards = randomCards(formattedCards);
-
-  return randomOrderCards;
+  return formattedCards;
 };
