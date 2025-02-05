@@ -1,0 +1,48 @@
+.home-page {
+  &__container {
+    margin: 0 1rem;
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    &--card-deck,
+    &--my-collection {
+      &__container {
+        padding-top: 0.75rem;
+        width: 18rem;
+        margin: 1rem auto 1rem;
+
+        @media (min-width: 768px) {
+          height: 300px;
+          margin: 10rem 0;
+        }
+      }
+
+      &__image {
+        width: 155px;
+        margin: auto;
+      }
+
+      &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      &__text {
+        text-align: center;
+      }
+    }
+  }
+}
