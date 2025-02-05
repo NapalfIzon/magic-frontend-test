@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@src/modules/shared/components/Header/Header";
 import { DataProvider } from "@src/modules/data/context/useData/useData";
-import { fetchCards } from "@src/modules/data/api/cards";
+import { fetchCards } from "@src/modules/data/api/fetchCards";
 import BootstrapProvider from "@src/modules/shared/context/useBootstrap/useBootstrap";
 import { CardsProvider } from "@src/modules/data/context/useCards/useCards";
 import Footer from "@src/modules/shared/components/Footer/Footer";
