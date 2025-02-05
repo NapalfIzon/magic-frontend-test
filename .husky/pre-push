@@ -1,0 +1,2 @@
+echo "🚀 Executing pre-push with unit tests validation..."
+npm run test
