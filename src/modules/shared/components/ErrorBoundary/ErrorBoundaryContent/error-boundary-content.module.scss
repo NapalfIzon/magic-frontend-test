@@ -1,0 +1,31 @@
+.error-boundary {
+  &__container {
+    position: relative;
+    margin: 1rem;
+
+    &__image {
+      margin: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    &__text {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      font-style: italic;
+
+      &--content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    &__button {
+      margin-top: 3rem;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
