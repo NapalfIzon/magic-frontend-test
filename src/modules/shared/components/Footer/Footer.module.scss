@@ -1,0 +1,27 @@
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  padding: 1rem;
+  color: #333;
+  text-align: center;
+  font-size: 0.9rem;
+
+  &__text {
+    margin: 0;
+  }
+
+  &__link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+  }
+}

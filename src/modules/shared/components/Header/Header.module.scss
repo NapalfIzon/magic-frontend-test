@@ -1,0 +1,36 @@
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+
+    img {
+      height: 100px;
+      width: auto;
+    }
+  }
+
+  &__link {
+    a {
+      color: blue;
+
+      @media (min-width: 768px) {
+        text-decoration: none;
+        display: inline-block;
+        transition: transform 0.2s ease-in-out;
+        transform-origin: center;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

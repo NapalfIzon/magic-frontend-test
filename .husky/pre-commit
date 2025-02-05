@@ -1,0 +1,2 @@
+echo "🚀 Executing pre-commit with lint-staged..."
+npx lint-staged

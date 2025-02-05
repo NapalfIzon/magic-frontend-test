@@ -1,5 +1,5 @@
 import { renderHook, waitFor } from "@testing-library/react";
-import { useData, DataProvider } from "@src/modules/data/context/useData";
+import { useData, DataProvider } from "@src/modules/data/context/useData/useData";
 import { cardsFixtures } from "../fixtures/cardsFixtures";
 import * as useRequestModule from "@src/modules/shared/hooks/useRequest";
 
