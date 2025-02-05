@@ -853,3 +853,5 @@ export const storedCardsFixtures: Card[] = [
     id: "id4",
   },
 ];
+
+export const cookiesFixtures: string[] = ["id1", "id4"];
