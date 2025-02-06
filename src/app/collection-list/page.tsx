@@ -20,10 +20,10 @@ const Collectionlist = () => {
         <h1>{`${DEFAULT_PAGE_NAME} - My Collection`}</h1>
       </div>
       <div className={styles["collection-list__container"]}>
-        <div className={styles["collection-list__grid"]} data-testid="collectionListGrid">
-          {!isLoading &&
-            (cardsList.length > 0 ? (
-              cardsList.map((card, index) => (
+        {!isLoading &&
+          (cardsList.length > 0 ? (
+            <div className={styles["collection-list__grid"]} data-testid="collectionListGrid">
+              {cardsList.map((card, index) => (
                 <div key={index} className={styles["collection-list__grid__item"]}>
                   <Card style={{ width: "18rem" }}>
                     <Card.Img
@@ -51,11 +51,13 @@ const Collectionlist = () => {
                     </Card.Body>
                   </Card>
                 </div>
-              ))
-            ) : (
+              ))}
+            </div>
+          ) : (
+            <div data-testid="collectionListEmpty" className={styles["collection-list__empty"]}>
               <p>No cards in your collection</p>
-            ))}
-        </div>
+            </div>
+          ))}
       </div>
     </div>
   );

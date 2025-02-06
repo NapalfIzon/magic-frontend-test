@@ -71,7 +71,7 @@ describe("Collectionlist", () => {
 
     const { queryByTestId, queryAllByTestId } = setup();
 
-    expect(queryByTestId("collectionListGrid")).toBeInTheDocument();
+    expect(queryByTestId("collectionListGrid")).not.toBeInTheDocument();
     expect(queryAllByTestId(/^collectionListGridItemImage-/)).toHaveLength(0);
     expect(queryAllByTestId(/^collectionListGridItemRemoveButton-/)).toHaveLength(0);
   });

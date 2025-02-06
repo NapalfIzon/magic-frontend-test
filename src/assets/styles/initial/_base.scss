@@ -1,5 +1,17 @@
 @use "@styles/global.scss" as *;
 
+html,
+body {
+  height: 100%;
+}
+
+#root,
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 body {
   position: relative;
   min-height: 100vh;
@@ -19,6 +31,16 @@ h1 {
 p,
 .row {
   margin: 0;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-container {
+  flex: 1;
 }
 
 .carousel-control-prev-icon,
