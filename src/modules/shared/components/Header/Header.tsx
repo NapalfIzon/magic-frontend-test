@@ -11,7 +11,7 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header>
+    <header data-testid="header">
       <Navbar expand={false} className="bg-body-primary mb-3">
         <Container fluid>
           <div className={styles.header__image}>

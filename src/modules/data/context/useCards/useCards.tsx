@@ -28,6 +28,7 @@ export const CardsProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       const storedValue = await getCookie("cards-list");
 
       if (!storedValue) {
+        setIsLoading(false);
         return [];
       }
 

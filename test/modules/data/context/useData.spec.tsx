@@ -40,7 +40,7 @@ describe("DataProvider / useData", () => {
     await waitFor(() => expect(result.current.isLoading).toBe(false));
     const cardNames = result.current.cards.map((card) => card.name);
 
-    expect(result.current.cards.length).toBe(2);
+    expect(result.current.cards.length).toBe(3);
     expect(cardNames).toEqual(expect.arrayContaining(["Card A", "Card B"]));
     expect(result.current.dataError).toBeNull();
   });

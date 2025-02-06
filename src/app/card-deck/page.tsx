@@ -30,11 +30,11 @@ const Cardsdeck = () => {
   return (
     <div className={styles["cards-deck"]}>
       <div className={styles["cards-deck__container"]}>
-        <div className={styles["cards-deck__container__title"]}>
+        <div className={styles["cards-deck__container__title"]} data-testid="cardsDeckTitle">
           <h1>{`${DEFAULT_PAGE_NAME} - Card deck`}</h1>
         </div>
         {isLoading && (
-          <div>
+          <div className={styles["cards-deck__container__loading"]} data-testid="cardsDeckLoading">
             <CardComponent style={{ width: "18rem" }}>
               <CardComponent.Img
                 variant="top"
@@ -58,7 +58,10 @@ const Cardsdeck = () => {
         )}
 
         {!isLoading && (
-          <div className={styles["cards-deck__container__carousel"]}>
+          <div
+            className={styles["cards-deck__container__carousel"]}
+            data-testid="cardsDeckCarousel"
+          >
             <Carousel interval={null} indicators={false} controls={true}>
               {deck.length > 0 &&
                 deck.map((card, index) => {
@@ -67,7 +70,7 @@ const Cardsdeck = () => {
                   );
 
                   return (
-                    <Carousel.Item key={card.id}>
+                    <Carousel.Item key={card.id} data-testid={`cardsDeckCarouselItem-${card.id}`}>
                       <div className={styles["cards-deck__container__carousel--item"]}>
                         <CardComponent style={{ width: "18rem" }}>
                           <CardComponent.Title
@@ -77,11 +80,9 @@ const Cardsdeck = () => {
                           <CardComponent.Body
                             className={styles["cards-deck__container__carousel--item__body"]}
                           >
-                            {/* <CardComponent.Link href={`${routePaths.CARD_DECK}/${card.id}`}>
-                              More info
-                            </CardComponent.Link> */}
                             <CardComponent.Link
                               className={isCardInCollection ? styles["collected"] : undefined}
+                              data-testid={`cardsDeckCarouselButtonItem-${card.id}`}
                               role="button"
                               aria-disabled={isCardInCollection}
                               onClick={() => handleCollectionAction(card.id)}
